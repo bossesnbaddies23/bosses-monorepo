@@ -1,0 +1,16 @@
+{
+  "name": "bosses-n-baddies-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:ai-boo": "npm run dev --workspace=packages/ai-boo",
+    "dev:unchained": "npm run dev --workspace=packages/unchained",
+    "build:ai-boo": "npm run build --workspace=packages/ai-boo",
+    "build:unchained": "npm run build --workspace=packages/unchained",
+    "start:ai-boo": "npm start --workspace=packages/ai-boo",
+    "start:unchained": "npm start --workspace=packages/unchained"
+  }
+}

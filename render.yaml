@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: ai-boo-platform
+    env: node
+    rootDir: packages/ai-boo
+    buildCommand: npm install && npm run build:ai-boo --prefix ../../
+    startCommand: npm run start:ai-boo --prefix ../../
+    envVars:
+      - key: NODE_VERSION
+        value: 18.0.0
+
+  - type: web
+    name: unchained-membership
+    env: node
+    rootDir: packages/unchained
+    buildCommand: npm install && npm run build:unchained --prefix ../../
+    startCommand: npm run start:unchained --prefix ../../
+    envVars:
+      - key: NODE_VERSION
+        value: 18.0.0
