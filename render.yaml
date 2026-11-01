@@ -1,3 +1,5 @@
+cd ~/bosses-monorepo/bosses-monorepo
+cat > render.yaml <<'EOF'
 services:
   - type: web
     name: ai-boo-platform
@@ -18,3 +20,4 @@ services:
     envVars:
       - key: NODE_VERSION
         value: 18.0.0
+EOF
