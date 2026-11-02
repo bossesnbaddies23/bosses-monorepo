@@ -2,7 +2,7 @@ cd ~/bosses-monorepo/bosses-monorepo
 cat > render.yaml <<'EOF'
 services:
   - type: web
-    name: ai-boo-platform
+    name: AI Boo Monorep
     env: node
     rootDir: .
     buildCommand: npm install && npm run build:ai-boo
