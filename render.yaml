@@ -1,23 +1,12 @@
-cd ~/bosses-monorepo/bosses-monorepo
-cat > render.yaml <<'EOF'
 services:
   - type: web
-    name: AI Boo Monorep
+    name: ai-boo-monorepo
     env: node
     rootDir: .
-    buildCommand: npm install && npm run build:ai-boo
+    buildCommand: npm install --legacy-peer-deps && npm run build:ai-boo
     startCommand: npm run start:ai-boo
     envVars:
       - key: NODE_VERSION
-        value: 18.0.0
-
-  - type: web
-    name: unchained-membership
-    env: node
-    rootDir: .
-    buildCommand: npm install && npm run build:unchained
-    startCommand: npm run start:unchained
-    envVars:
-      - key: NODE_VERSION
-        value: 18.0.0
-EOF
+        value: 18.20.0
+      - key: NODE_ENV
+        value: production

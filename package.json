@@ -1,16 +1,17 @@
 {
-  "name": "bosses-n-baddies-monorepo",
+  "name": "ai-boo-monorepo",
   "version": "1.0.0",
+  "description": "AI Boo & Chats Unchained Sovereign Monorepo Platform",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
-    "dev:ai-boo": "npm run dev --workspace=packages/ai-boo",
-    "dev:unchained": "npm run dev --workspace=packages/unchained",
-    "build:ai-boo": "npm run build --workspace=packages/ai-boo",
-    "build:unchained": "npm run build --workspace=packages/unchained",
-    "start:ai-boo": "npm start --workspace=packages/ai-boo",
-    "start:unchained": "npm start --workspace=packages/unchained"
-  }
+    "build:ai-boo": "cd packages/ai-boo && npm install --legacy-peer-deps && npm run build",
+    "start:ai-boo": "cd packages/ai-boo && npm run start",
+    "build:unchained": "cd packages/ai-boo && npm install --legacy-peer-deps && npm run build",
+    "start:unchained": "cd packages/ai-boo && npm run start"
+  },
+  "devDependencies": {
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "license": "UNLICENSED"
 }
